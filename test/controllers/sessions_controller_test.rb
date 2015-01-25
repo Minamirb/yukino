@@ -10,4 +10,10 @@ class SessionsControllerTest < ActionController::TestCase
     assert session[:auth_id]
     assert_redirected_to root_path
   end
+
+  test "on DELETE destroy" do
+    delete :destroy, {}, {auth_id: auths(:one).id}
+    assert_equal nil, session[:auth_id]
+    assert_redirected_to root_path
+  end
 end
