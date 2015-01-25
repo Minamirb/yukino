@@ -43,3 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'omniauth'
+gem 'omniauth-twitter'
