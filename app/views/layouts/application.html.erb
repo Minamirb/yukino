@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_auth %>
+  <%= current_auth.provider %>でログイン中&nbsp;<%= link_to 'ログアウト', sessions_path, method: :delete%>
+<% else %>
+  <%= link_to "Twitterでログイン", "/auth/twitter" %>
+<% end %>
 <%= yield %>
 
 </body>
