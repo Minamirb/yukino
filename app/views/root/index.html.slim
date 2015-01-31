@@ -8,14 +8,16 @@ header
     br
     | あなたの代わりにゆきのがポストします
 
-= form_for(Question.new) do |f|
-  .post-questions
-  p
-    = f.text_field :id, class: 'input-place', placeholder: 'どこ？'
-  p
-    = f.text_field :content, class: 'input-thing', placeholder: 'なに？'
-  p
-    = f.submit value: '質問を送る', class: 'btn submit-btn'
+#app
+  = form_for(Question.new) do |f|
+    .post-questions
+    p
+      = f.text_field :id, "v-model" => 'place', placeholder: 'どこ？'
+      = button_tag '場所', "v-on": 'click: getGeo', onClick: 'return false'
+    p
+      = f.text_field :content, class: 'input-thing', placeholder: 'なに？'
+    p
+      = f.button value: '質問を送る', class: 'btn submit-btn', "v-on" => "click: submit"
 
 footer
   p.copyright
