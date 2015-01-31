@@ -7,11 +7,12 @@ html
 
     = csrf_meta_tags
   body class="page-#{params[:controller]} page-#{params[:action]}"
-    - if current_auth
-      = "#{current_auth.provider} でログイン中"
-      = link_to 'ログアウト', sessions_path, method: :delete
-    - else
-      = link_to "Twitterでログイン", "/auth/twitter"
     .wrapper
       = yield
+      - if current_auth
+        = "#{current_auth.provider} でログイン中"
+        = link_to 'ログアウト', sessions_path, method: :delete
+      - else
+        = link_to "Twitterでログイン", "/auth/twitter"
 = javascript_include_tag 'application'
+
