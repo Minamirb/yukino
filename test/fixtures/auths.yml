@@ -5,11 +5,11 @@ one:
   uid: MyString
   credentials_token: MyString
   credentials_secret: MyString
-  user_id: 
+  user: one
 
 two:
   provider: MyString
   uid: MyString
   credentials_token: MyString
   credentials_secret: MyString
-  user_id: 
+  user: two

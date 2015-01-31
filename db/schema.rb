@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150131022145) do
   create_table "questions", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "content"
+    t.string   "place"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at", null: false

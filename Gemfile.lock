@@ -109,6 +109,7 @@ GEM
       sprockets-rails
     rails-assets-fontawesome (4.3.0)
     rails-assets-normalize-scss (3.0.2)
+    rails-assets-vue (0.11.4)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
@@ -187,6 +188,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-assets-fontawesome
   rails-assets-normalize-scss
+  rails-assets-vue
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   slim-rails
