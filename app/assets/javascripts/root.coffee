@@ -6,19 +6,22 @@
 new Vue(
   el: '#app'
   data: {
-    place: null
+    place:     null
+    latitude:  null
+    longitude: null
   }
   methods: {
-    submit: () ->
-      alert 'hoge'
-      false
-    getGeo: () ->
+    submit: (e) ->
+      # console.log @$data
+      # e.preventDefault()
+    getGeo: (e) ->
+      e.preventDefault()
       vm = @
       navigator.geolocation.getCurrentPosition(
         (position) ->
           coords = position.coords
-          lat    = coords.latitude
-          lng    = coords.longitude
+          vm.latitude  = lat = coords.latitude
+          vm.longitude = lng = coords.longitude
           console.log [lat, lng]
           geocoder = new google.maps.Geocoder()
           latlng = new google.maps.LatLng(lat, lng)

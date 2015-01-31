@@ -3,6 +3,7 @@ class CreateQuestions < ActiveRecord::Migration
     create_table :questions do |t|
       t.references :user, index: true
       t.string :content
+      t.string :place
       t.float :latitude
       t.float :longitude
 
