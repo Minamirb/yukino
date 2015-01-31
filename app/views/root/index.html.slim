@@ -1,0 +1,23 @@
+header
+  = image_tag "yukino_icon_500x500.png", alt: 'ゆきのだよ！', class: 'yukino-icon'
+  h1 ゆきのが聞く！
+  p 
+    | あなたがお探しの
+    br
+    | 場所 × コト 
+    br
+    | あなたの代わりにゆきのがポストします
+
+= form_for(Auth.new, url: '') do |f|
+  .post-questions
+  p
+    = f.text_field :id, class: 'input-place', placeholder: 'どこ？'
+  p
+    = f.text_field :id, class: 'input-thing', placeholder: 'なに？'
+  p
+    = f.submit value: '質問を送る', class: 'btn submit-btn'
+
+footer
+  p.copyright
+    | minami.rb
+  i.fa.fa-subway

@@ -48,3 +48,7 @@ end
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth'
 gem 'omniauth-twitter'
+
+source 'https://rails-assets.org'
+gem 'rails-assets-normalize-scss'
+gem 'rails-assets-fontawesome'
