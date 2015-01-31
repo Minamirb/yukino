@@ -8,12 +8,12 @@ header
     br
     | あなたの代わりにゆきのがポストします
 
-= form_for(Auth.new, url: '') do |f|
+= form_for(Question.new) do |f|
   .post-questions
   p
     = f.text_field :id, class: 'input-place', placeholder: 'どこ？'
   p
-    = f.text_field :id, class: 'input-thing', placeholder: 'なに？'
+    = f.text_field :content, class: 'input-thing', placeholder: 'なに？'
   p
     = f.submit value: '質問を送る', class: 'btn submit-btn'
 
