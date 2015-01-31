@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Yukino 
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = csrf_meta_tags
+  body class="page-#{params[:controller]} page-#{params[:action]}"
+    - if current_auth
+      = "#{current_auth.provider} でログイン中"
+      = link_to 'ログアウト', sessions_path, method: :delete
+    - else
+      = link_to "Twitterでログイン", "/auth/twitter"
+    .wrapper
+      = yield
