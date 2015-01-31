@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     
-  resources :questions, only: :create
+  resources :questions, only: [:create, :index]
 
   delete :sessions, to: 'sessions#destroy'
   scope :auth do

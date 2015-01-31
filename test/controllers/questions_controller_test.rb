@@ -12,6 +12,6 @@ class QuestionsControllerTest < ActionController::TestCase
       post :create, question: {place: "大阪府日本橋", content: '美味しいラーメン屋はどこですか？ここですか？なんですか。'}
     end
     assert assigns(:question).place
-    assert_redirected_to root_path
+    assert_redirected_to questions_path
   end
 end
