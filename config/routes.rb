@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+    
+  resources :questions, only: :create
+
   delete :sessions, to: 'sessions#destroy'
   scope :auth do
     get ":provider/callback", to: "sessions#create"
