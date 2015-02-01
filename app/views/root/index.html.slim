@@ -1,10 +1,15 @@
 header
   = image_tag "yukino_icon_500x500.png", alt: 'ゆきのだよ！', class: 'yukino-icon'
-  h1.logo-type ゆきの<span>が</span>聞く！
+  h1.logo-type
+    | ゆきの
+    span が
+    | 聞く！
   p 
     | あなたがお探しの
     br
-    | <span>場所</span> × <span>コト</span> 
+    span 場所
+    | × 
+    span コト
     br
     | あなたの代わりにゆきのがポストします
 
@@ -13,7 +18,7 @@ header
     p
       i.fa.fa-location-arrow 
       = f.text_field :place, class: 'input-place', placeholder: 'どこ？', "v-model" => 'place'
-      = button_tag '場所', "v-on": 'click: getGeo', onClick: 'return false'
+      = button_tag '場所', "v-on" => 'click: getGeo', onClick: 'return false'
       
       = f.hidden_field :latitude,  "v-model" => 'latitude'
       = f.hidden_field :longitude, "v-model" => 'longitude'
